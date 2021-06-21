@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
-               BuildableName = "UE4.app"
+               BuildableName = "UE4Game.app"
                BlueprintName = "UE4"
                ReferencedContainer = "container:UE4.xcodeproj">
             </BuildableReference>
@@ -27,19 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
+            BuildableName = "UE4Game.app"
+            BlueprintName = "UE4"
+            ReferencedContainer = "container:UE4.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
       </Testables>
-      <MacroExpansion>
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
-               BuildableName = "UE4.app"
-               BlueprintName = "UE4"
-               ReferencedContainer = "container:UE4.xcodeproj">
-            </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Development Editor"
@@ -53,16 +51,14 @@
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
-               BuildableName = "UE4.app"
-               BlueprintName = "UE4"
-               ReferencedContainer = "container:UE4.xcodeproj">
-            </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
+            BuildableName = "UE4Game.app"
+            BlueprintName = "UE4"
+            ReferencedContainer = "container:UE4.xcodeproj">
+         </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Development Editor"
@@ -72,13 +68,13 @@
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
-               BuildableName = "UE4.app"
-               BlueprintName = "UE4"
-               ReferencedContainer = "container:UE4.xcodeproj">
-            </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FFCD0BEC72C3BA8A5E9B689A"
+            BuildableName = "UE4Game.app"
+            BlueprintName = "UE4"
+            ReferencedContainer = "container:UE4.xcodeproj">
+         </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
