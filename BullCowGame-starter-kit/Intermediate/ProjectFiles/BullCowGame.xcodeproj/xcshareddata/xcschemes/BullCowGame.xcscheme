@@ -70,8 +70,7 @@
             argument = "-RunConfig=$(Configuration)"
             isEnabled = "YES">
          </CommandLineArgument>
-      </CommandLineArguments>
-      <AdditionalOptions>
+      </CommandLineArguments>      <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
