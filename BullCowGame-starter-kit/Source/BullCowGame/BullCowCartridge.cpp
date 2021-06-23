@@ -8,9 +8,8 @@ void UBullCowCartridge::BeginPlay()
 	PrintLine(TEXT("Greetings, traveler!"));
 	// TODO: Remove magic number below.
 	PrintLine(TEXT("Guess the 4 letter word."));
-	HiddenWord = TEXT("code");
 	
-	// Set lives.
+	InitGame();
 }
 
 // When the player hits enter.
@@ -31,4 +30,11 @@ void UBullCowCartridge::OnInput(const FString& Input)
 	// If lives are zero or less, end game.
 	// Print losing message.
 	// Reveal the word.
+}
+
+void UBullCowCartridge::InitGame()
+{
+	HiddenWord = TEXT("code");
+	// TODO: Set lives based on length of hidden word.
+	Lives = 4;
 }
