@@ -8,15 +8,13 @@ void UBullCowCartridge::BeginPlay()
 	PrintLine(TEXT("Greetings, traveler!"));
 	// TODO: Remove magic number below.
 	PrintLine(TEXT("Guess the 4 letter word."));
+	HiddenWord = TEXT("code");
 }
 
 // When the player hits enter.
 void UBullCowCartridge::OnInput(const FString& Input)
 {
 	ClearScreen();
-	
-	// TODO: Move outside this function.
-	FString HiddenWord = TEXT("code");
 	
 	if (HiddenWord == Input)
 	{
