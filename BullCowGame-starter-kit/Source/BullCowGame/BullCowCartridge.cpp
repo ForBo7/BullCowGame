@@ -16,14 +16,19 @@ void UBullCowCartridge::BeginPlay()
 void UBullCowCartridge::OnInput(const FString& Input)
 {
 	ClearScreen();
-	if (HiddenWord == Input)
+	if (Input == HiddenWord)
 	{
 		PrintLine(TEXT("You guessed the correct word!"));
 	}
 	else
 	{
-		// Check if isogram.
 		// Check if right number of characters.
+		if (Input.Len() != HiddenWord.Len())
+		{
+			// TODO: Remove magic number below.
+			PrintLine(TEXT("The hidden word is 4 characters long."));
+		}
+		// Check if isogram.
 		// If lives > 0, remove life.
 		PrintLine(TEXT("You guessed incorrectly!"));
 	}
