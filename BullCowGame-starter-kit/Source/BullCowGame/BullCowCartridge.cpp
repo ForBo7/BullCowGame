@@ -9,7 +9,7 @@ void UBullCowCartridge::BeginPlay()
 	// TODO: Remove magic number below.
 	PrintLine(TEXT("Guess the 4 letter word."));
 	
-	InitGame();
+	SetUpGame();
 }
 
 // When the player hits enter.
@@ -32,7 +32,7 @@ void UBullCowCartridge::OnInput(const FString& Input)
 	// Reveal the word.
 }
 
-void UBullCowCartridge::InitGame()
+void UBullCowCartridge::SetUpGame()
 {
 	HiddenWord = TEXT("code");
 	// TODO: Set lives based on length of hidden word.
