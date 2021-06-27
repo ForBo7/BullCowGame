@@ -4,7 +4,7 @@
    <Group
       location = "container:"      name = "Engine">
       <FileRef
-         location = "group:Intermediate/ProjectFiles/UE4.xcodeproj">
+         location = "group:Intermediate/ProjectFiles/UE5.xcodeproj">
       </FileRef>
    </Group>
    <Group

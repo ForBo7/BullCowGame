@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBB253451DB2F35271D0FCA1"
+               BlueprintIdentifier = "964556BD93902F3FABA80BF6"
                BuildableName = "BullCowGame.app"
                BlueprintName = "BullCowGame"
                ReferencedContainer = "container:BullCowGame.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBB253451DB2F35271D0FCA1"
+               BlueprintIdentifier = "964556BD93902F3FABA80BF6"
                BuildableName = "BullCowGame.app"
                BlueprintName = "BullCowGame"
                ReferencedContainer = "container:BullCowGame.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBB253451DB2F35271D0FCA1"
+               BlueprintIdentifier = "964556BD93902F3FABA80BF6"
                BuildableName = "BullCowGame.app"
                BlueprintName = "BullCowGame"
                ReferencedContainer = "container:BullCowGame.xcodeproj">
@@ -70,7 +70,8 @@
             argument = "-RunConfig=$(Configuration)"
             isEnabled = "YES">
          </CommandLineArgument>
-      </CommandLineArguments>      <AdditionalOptions>
+      </CommandLineArguments>
+      <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -83,7 +84,7 @@
          runnableDebuggingMode = "0">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBB253451DB2F35271D0FCA1"
+               BlueprintIdentifier = "964556BD93902F3FABA80BF6"
                BuildableName = "BullCowGame.app"
                BlueprintName = "BullCowGame"
                ReferencedContainer = "container:BullCowGame.xcodeproj">

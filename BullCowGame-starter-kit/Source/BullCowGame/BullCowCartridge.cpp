@@ -4,12 +4,18 @@
 // When game starts.
 void UBullCowCartridge::BeginPlay()
 {
-    Super::BeginPlay();
+	SetUpGame();
+	
+	Super::BeginPlay();
+
+	// Debug lines.
+	PrintLine(TEXT("The hidden word is %s."), *HiddenWord);
+	PrintLine(TEXT("It is %i characters long."), HiddenWord.Len());
+	
+
 	PrintLine(TEXT("Greetings, traveler!"));
 	// TODO: Remove magic number below.
 	PrintLine(TEXT("Guess the 4 letter word."));
-	
-	SetUpGame();
 }
 
 // When the player hits enter.
