@@ -14,8 +14,11 @@ void UBullCowCartridge::BeginPlay()
 	
 
 	PrintLine(TEXT("Greetings, traveler!"));
-	// TODO: Remove magic number below.
-	PrintLine(TEXT("Guess the 4 letter word."));
+	PrintLine(TEXT("Guess the %i letter word."), HiddenWord.Len());
+	PrintLine(TEXT("You have %i lives."), Lives);
+	
+	PrintLine(TEXT("\nPress tab to access the terminal."));
+	PrintLine(TEXT("Enter to continue."));
 }
 
 // When the player hits enter.
@@ -31,12 +34,15 @@ void UBullCowCartridge::OnInput(const FString& Input)
 		// Check if right number of characters.
 		if (Input.Len() != HiddenWord.Len())
 		{
-			// TODO: Remove magic number below.
-			PrintLine(TEXT("The hidden word is 4 characters long."));
+			PrintLine(TEXT("The hidden word is %i characters long."),
+					  HiddenWord.Len());
+		}
+		else
+		{
+			PrintLine(TEXT("You guessed incorrectly!"));
 		}
 		// Check if isogram.
 		// If lives > 0, remove life.
-		PrintLine(TEXT("You guessed incorrectly!"));
 	}
 	// If lives are zero or less, end game.
 	// Print losing message.
@@ -46,6 +52,5 @@ void UBullCowCartridge::OnInput(const FString& Input)
 void UBullCowCartridge::SetUpGame()
 {
 	HiddenWord = TEXT("code");
-	// TODO: Set lives based on length of hidden word.
-	Lives = 4;
+	Lives = HiddenWord.Len();
 }
