@@ -65,9 +65,13 @@ void UBullCowCartridge::ProcessGuess(FString Guess)
 			PrintLine(TEXT("The hidden word is %i characters long."),
 					  HiddenWord.Len());
 		}
+		else if (!IsIsogram(Guess))
+		{
+			PrintLine(TEXT("That is not an isogram!"));
+		}
 		else if (Lives == 0)
 		{
-			PrintLine(TEXT("You lose."));
+			PrintLine(TEXT("You lose. The word was '%s'."), *HiddenWord);
 			EndGame();
 		}
 		else
@@ -77,9 +81,17 @@ void UBullCowCartridge::ProcessGuess(FString Guess)
 			PrintLine(TEXT("%i lives remain!"), Lives);
 		}
 		// Check if isogram.
-		// If lives > 0, remove life.
 	}
-	// If lives are zero or less, end game.
-	// Print losing message.
 	// Reveal the word.
+}
+
+bool UBullCowCartridge::IsIsogram(FString Guess)
+{
+	/*
+	 - Check the first letter against all other letters.
+	 - If the first letter is equal to another, return false.
+	 - If the letter is unique, repeat for the next letter.
+	 - If all are unique, return true.
+	 */
+	return true;
 }
