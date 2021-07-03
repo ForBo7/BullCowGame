@@ -24,36 +24,7 @@ void UBullCowCartridge::OnInput(const FString& Input)
 	else
 	{
 		// Check player guess.
-		if (Input == HiddenWord)
-		{
-			PrintLine(TEXT("You guessed the correct word!"));
-			EndGame();
-		}
-		else
-		{
-			// Check if right number of characters.
-			if (Input.Len() != HiddenWord.Len())
-			{
-				PrintLine(TEXT("The hidden word is %i characters long."),
-						  HiddenWord.Len());
-			}
-			else if (Lives == 0)
-			{
-				PrintLine(TEXT("You lose."));
-				EndGame();
-			}
-			else
-			{
-				PrintLine(TEXT("You guessed incorrectly!"));
-				--Lives;
-				PrintLine(TEXT("%i lives remain!"), Lives);
-			}
-			// Check if isogram.
-			// If lives > 0, remove life.
-		}
-		// If lives are zero or less, end game.
-		// Print losing message.
-		// Reveal the word.
+		ProcessGuess(Input);
 	}
 }
 
@@ -77,4 +48,38 @@ void UBullCowCartridge::EndGame()
 {
 	bGameOver = true;
 	PrintLine(TEXT("Press enter to play again."));
+}
+
+void UBullCowCartridge::ProcessGuess(FString Guess)
+{
+	if (Guess == HiddenWord)
+	{
+		PrintLine(TEXT("You guessed the correct word!"));
+		EndGame();
+	}
+	else
+	{
+		// Check if right number of characters.
+		if (Guess.Len() != HiddenWord.Len())
+		{
+			PrintLine(TEXT("The hidden word is %i characters long."),
+					  HiddenWord.Len());
+		}
+		else if (Lives == 0)
+		{
+			PrintLine(TEXT("You lose."));
+			EndGame();
+		}
+		else
+		{
+			PrintLine(TEXT("You guessed incorrectly!"));
+			--Lives;
+			PrintLine(TEXT("%i lives remain!"), Lives);
+		}
+		// Check if isogram.
+		// If lives > 0, remove life.
+	}
+	// If lives are zero or less, end game.
+	// Print losing message.
+	// Reveal the word.
 }
