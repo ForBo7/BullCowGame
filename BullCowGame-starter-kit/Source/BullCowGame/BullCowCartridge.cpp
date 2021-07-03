@@ -85,7 +85,7 @@ void UBullCowCartridge::ProcessGuess(FString Guess)
 	// Reveal the word.
 }
 
-bool UBullCowCartridge::IsIsogram(FString Word)
+bool UBullCowCartridge::IsIsogram(FString Word) const
 {
 	/*
 	 - Check the first letter against all other letters.
