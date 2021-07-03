@@ -37,9 +37,16 @@ void UBullCowCartridge::OnInput(const FString& Input)
 				PrintLine(TEXT("The hidden word is %i characters long."),
 						  HiddenWord.Len());
 			}
+			else if (Lives == 0)
+			{
+				PrintLine(TEXT("You lose."));
+				EndGame();
+			}
 			else
 			{
 				PrintLine(TEXT("You guessed incorrectly!"));
+				--Lives;
+				PrintLine(TEXT("%i lives remain!"), Lives);
 			}
 			// Check if isogram.
 			// If lives > 0, remove life.
