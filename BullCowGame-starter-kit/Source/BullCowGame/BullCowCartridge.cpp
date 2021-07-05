@@ -80,18 +80,21 @@ void UBullCowCartridge::ProcessGuess(FString Guess)
 			--Lives;
 			PrintLine(TEXT("%i lives remain!"), Lives);
 		}
-		// Check if isogram.
 	}
-	// Reveal the word.
 }
 
 bool UBullCowCartridge::IsIsogram(FString Word) const
 {
-	/*
-	 - Check the first letter against all other letters.
-	 - If the first letter is equal to another, return false.
-	 - If the letter is unique, repeat for the next letter.
-	 - If all are unique, return true.
-	 */
+	for (int32 CharToCheck = 0; CharToCheck < Word.Len(); ++CharToCheck)
+	{
+		for (int32 AnotherChar = CharToCheck + 1; AnotherChar < Word.Len();
+			 ++AnotherChar)
+		{
+			if (Word[CharToCheck] == Word[AnotherChar])
+			{
+				return false;
+			}
+		}
+	}
 	return true;
 }
