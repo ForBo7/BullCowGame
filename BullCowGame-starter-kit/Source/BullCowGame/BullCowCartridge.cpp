@@ -38,8 +38,8 @@ void UBullCowCartridge::OnInput(const FString& Input)
 
 void UBullCowCartridge::SetUpGame()
 {
-	TArray <FString> ValidWordList = GetValidWords(HiddenWordList);
-	HiddenWord = ValidWordList[FMath::RandRange(0, ValidWordList.Num()-1)];
+	Isograms = GetValidWords(HiddenWordList);
+	HiddenWord = Isograms[FMath::RandRange(0, Isograms.Num()-1)];
 	Lives = HiddenWord.Len();
 	bGameOver = false;
 	
